@@ -1,13 +1,19 @@
 #!/bin/bash
 set -e
 
-echo "Building frontend..."
+# Colors
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+echo -e "${YELLOW}Building frontend...${NC}"
 cd frontend
 npm install --silent
 npm run build
 
-echo "Building Go binary..."
+echo -e "${YELLOW}Building Go binary...${NC}"
 cd ..
-go build -o webhook-tester
+CGO_ENABLED=1 go build -o webhook-tester
 
-echo "Done! Binary: ./webhook-tester ($(du -h webhook-tester | cut -f1))"
+SIZE=$(du -h webhook-tester | cut -f1)
+echo -e "${GREEN}Done! Binary: ./webhook-tester ($SIZE)${NC}"
