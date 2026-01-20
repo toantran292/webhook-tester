@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100;
+}
+
+.json-viewer {
+  @apply font-mono text-sm;
+}
+
+.json-key {
+  @apply text-purple-600;
+}
+
+.json-string {
+  @apply text-green-600;
+}
+
+.json-number {
+  @apply text-blue-600;
+}
+
+.json-boolean {
+  @apply text-orange-600;
+}
+
+.json-null {
+  @apply text-gray-500;
+}
