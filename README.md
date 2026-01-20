@@ -15,7 +15,7 @@ A self-hosted webhook testing tool. Capture, inspect, and debug HTTP requests in
 ### Prerequisites
 
 - Go 1.21+
-- Node.js 18+
+- Node.js 20+
 - npm
 
 ### Install & Run
